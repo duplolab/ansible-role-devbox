@@ -1,0 +1,3 @@
+- src: https://github.com/duplolab/ansible-role-terraform.git
+  version: wip
+  name: duplolab.terraform
