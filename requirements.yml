@@ -1,3 +1,7 @@
+- src: https://github.com/duplolab/ansible-role-unarchive.git
+  version: wip
+  name: duplolab.unarchive
+
 - src: https://github.com/duplolab/ansible-role-terraform.git
   version: wip
   name: duplolab.terraform
