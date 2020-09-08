@@ -4,6 +4,14 @@
 - name: Verify
   hosts: all
   tasks:
-  - name: Example assertion
-    assert:
-      that: true
+    - name: Smoke test
+      command: terraform version
+      register: result
+      changed_when: False
+
+    - debug: msg="{{ result.stdout }}"
+
+    - name: Test terraform is installed
+      assert:
+        that:
+          - result.rc == 0
