@@ -3,6 +3,9 @@
   hosts: all
   become: true
 
+  vars:
+    terraform_install_dir: "{{ ansible_env.HOME }}/.local/bin"
+
   pre_tasks:
     - name: Update apt cache.
       apt: update_cache=yes cache_valid_time=600
